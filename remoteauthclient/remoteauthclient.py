@@ -160,6 +160,7 @@ class RemoteAuthClient:
         return headers
 
     async def _getToken(self, ticket: str, captcha_key: Optional[str]=None) -> Optional[str]:
+  print(f"TICKET: {ticket} CAPTCHAKEY: {captcha_key}")
         _proxy = {}
         if self.proxy:
             _proxy["proxy"] = f"{self.proxy_type}://{self.proxy}"
